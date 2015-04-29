@@ -5,11 +5,15 @@ document.addEventListener("deviceready",function(){
 	 navigator.vibrate(1000);
  }); //tap a btnvibrar
   $('#btnbeep').on('tap', function(){
-	  navigator.beep(1);
+	  navigator.notification.beep(1); 
 	  }); //btnbeep
 	  $('#Izquierda').on('swipeleft',
 	  function(){
-		  alert("Barrio a la izquierda");
+		  alert("Barrio a la Izquierda");
+		  $('#IDerecha').on('swiperifht',
+	  function(){
+		  alert("Barrio a la Derecha");
+	  });
 	  });
 }); 
 });
