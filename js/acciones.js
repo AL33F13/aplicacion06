@@ -13,6 +13,17 @@ document.addEventListener("deviceready",function(){
 		  $('#IDerecha').on('swiperifht',
 	  function(){
 		  alert("Barrio a la Derecha");
+		  document.addEventListener("pause", function (){
+			  $('#listado').append("<p> se pauso </p>");
+			  document.addEventListener("resume", function (){
+				  $("#listado").append("<p> se reinicion </p>");
+				  $(window).on('orientationchange', function(e){
+					  $('#listado').oppend("<p> Orietacion: " + e.orientation + "</p>");
+				  });
+			  });
+				  
+		  });
+		  
 	  });
 	  });
 }); 
